@@ -1,18 +1,18 @@
-﻿#NoEnv																;Speed up the process
-#SingleInstance, force												;When updating script, replaces the old one.
-#MaxThreadsperHotkey 2												;X threads per key.
+﻿#NoEnv									;Speed up the process
+#SingleInstance, force							;When updating script, replaces the old one.
+#MaxThreadsperHotkey 2							;X threads per key.
 
-#v::																;Pinging google. Maybe we should hide the window and get the avg. result?
+#v::									;Pinging google. Maybe we should hide the window and get the avg. result?
 Run,%comspec% /k ping google.com -t
 return
 
-#c::																;Disabling a couple of bandwidth drainers.
+#c::									;Disabling a couple of bandwidth drainers.
 Run %comspec% /c /k ipconfig /flushdns,,hide
 Process,Close,InstallAgent.exe
 Process,Close,InstallAgentUserBroker.exe
 return
 
-#p::																;Coordinates of the mouse. Press again for disable.
+#p::									;Coordinates of the mouse. Press again for disable.
 toggle :=!toggle
 loop{
     if toggle
@@ -28,13 +28,13 @@ loop{
 }
 return
 
-<!Numpad6::																;Skip track. I dont have the special keyboard button fot it
+<!Numpad6::								;Skip track. I dont have the special keyboard button fot it
 Send,{Media_Next}
 return
 
-<!Numpad4::																;Previous Track.
+<!Numpad4::								;Previous Track.
 Send,{Media_Prev}
 return
 
-<!NumpadEnter::															;Pause/play track.
+<!NumpadEnter::								;Pause/play track.
 Send,{Media_Play_Pause}
