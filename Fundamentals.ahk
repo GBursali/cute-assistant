@@ -15,8 +15,8 @@ return
 #p::									;Coordinates of the mouse. Press again for disable.
 toggle :=!toggle
 loop{
-    if toggle
-    {
+	if toggle
+	{
 		MouseGetPos X,Y
 		ToolTip X:%X% ^ Y:%Y%
 	}
